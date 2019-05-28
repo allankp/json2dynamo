@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='json2dynamo',
-    version='0.0.1',
+    version='0.0.2',
     author='Allan Kilpatrick',
     author_email='allanklp@gmail.com',
     url='https://github.com/allankp/json2dynamo',
