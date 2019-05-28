@@ -1,0 +1,9 @@
+build/
+dist/
+.env/
+.idea/
+__*__/
+*.egg-info
+.coverage
+tests/.pytest_cache
+coverage.xml
