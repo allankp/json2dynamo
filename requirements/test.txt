@@ -1,5 +1,6 @@
 -r base.txt
 
+bump2version==0.5.10
 pylint==2.3.1
 pytest==4.5.0
 pytest-cov==2.7.1

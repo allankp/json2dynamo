@@ -2,6 +2,7 @@ build/
 dist/
 .env/
 .idea/
+.vscode/
 __*__/
 *.egg-info
 .coverage
