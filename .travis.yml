@@ -15,6 +15,7 @@ deploy:
     secure: Hct3al4hx3OmnDAlzk+NP719vr5O0gYymT1GuB13oq7zUs+angudCvRDFg+aNdRslkSkZK6jpF5D0yKp5dHL4MJLREVs1BVR5YL1WkZEeXNa5HL4z65ISNrjxfAwkJB98weRbhidF3FGhyupHEoIounZ2f1E38De0I60vKxOUKURVMDSUcXW4vFzLaHMUKdRQFfrnHF7K3hzfyisPqYbbeoktWbWHznHVPknmrfSEzKHsxo47qSQu2CB/clB0Qdvl8T//4JpcXKLT+QRieo0yHOuoWFKp+drWHu7r82c2GwT1TD7/wdo3gF3GTmcT2OqHcpKb9Vgs4DUbABFv3YqLBtn5oz+P/WWgvpSWekb9M+13ncTl73frWKtrFUY1uoUuniddgvSUlya/gidu/Ij1UFYlNPNgfcvFQlkaMw/mQccitSDbUxPh7YDb9NTMgmcOAja36v6+252wRrqtbybr6+PgGifM+EMCOKW/8S1fY6zUk0hOHmNPxEpcGns6/67pIU7oUKecJd3pa7JNrwDjcQKzCqAcj9gp24venoOTAkqaSaGnAWV4Sfw9HVKJ9MhKoI84WHQlGzWp2uMVA7lk8RxP6UMhiqUUMR9MD+6w0YOyNxdwUBPkIIs2JX+rgIiqq1eM07ibTb8EuQmSeSrxwoYv44DGTenPui9P0NUE/8=
   on:
     python: '3.7'
+    tags: true
     branch: master
     distributions: sdist bdist_wheel
     repo: allankp/json2dynamo
