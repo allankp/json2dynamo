@@ -7,7 +7,7 @@ python/format:
 release:
     # major / minor / patch
     bump2version $@
-    git push origin master -tags
+    git push origin master --tags
 
 unit-tests:
     pip install -r requirements/test.txt
