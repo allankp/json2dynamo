@@ -1,0 +1,14 @@
+install:
+    pip install -r requirements/base.txt
+
+python/format:
+    black json2dynamo/
+
+release:
+    # major / minor / patch
+    bump2version $@
+    git push origin master --tags
+
+unit-tests:
+    pip install -r requirements/test.txt
+    pytest -v tests/
