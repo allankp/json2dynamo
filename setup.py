@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='json2dynamo',
-    version='0.1.0',
+    version='0.1.1',
     author='Allan Kilpatrick',
     author_email='allanklp@gmail.com',
     long_description=long_description,
