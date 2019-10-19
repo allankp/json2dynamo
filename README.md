@@ -13,3 +13,10 @@ Allowing the insertion of the outputed files via the aws cli.
 
 ## Usage
 `json2dynamo --inputpath <path/to/json> --outputpath <path/to/output/folder>`
+
+## Development
+This repo uses a [bake](https://github.com/kennethreitz/bake) file, to use the commands install it via
+
+`pip install bake-cli`
+
+Once installed run `bake` to see commands
