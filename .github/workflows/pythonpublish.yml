@@ -1,4 +1,4 @@
-name: Upload json2dynamo to PyPi
+name: master
 
 on:
   release:
