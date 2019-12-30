@@ -2,6 +2,7 @@ import os
 import pytest
 import shutil
 import json
+from unittest.mock import mock_open, patch
 
 from click.testing import CliRunner
 
@@ -45,9 +46,27 @@ def test_write_files_to_folder(remove_output_folder, sample_json, sample_mapping
         assert file.read() == sample_mapping
 
 
+def test_write_files_to_folder_exception(remove_output_folder, sample_json):
+    with patch("builtins.open", mock_open()) as mock_file:
+        mock_file.side_effect = IOError
+
+        with pytest.raises(IOError):
+            JsonTransfromer().write_file_to_folder(
+                str(sample_json), OUTPUT_PATH, SAMPLE_FILE_NAME)
+
+
 def test_transform_json_files(remove_output_folder):
     runner = CliRunner()
     result = runner.invoke(app.cli, [RESOURCE_PATH, OUTPUT_PATH])
     assert result.exit_code == 0
     _, _, files = next(os.walk(OUTPUT_PATH))
     assert len(files) == 2
+
+
+def test_transform_json_files_exception(remove_output_folder):
+    with patch("builtins.open", mock_open()) as mock_file:
+        mock_file.side_effect = IOError
+
+        runner = CliRunner()
+        result = runner.invoke(app.cli, [RESOURCE_PATH, OUTPUT_PATH])
+        assert result.exit_code == 1

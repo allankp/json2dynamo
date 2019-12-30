@@ -11,4 +11,4 @@ release:
 
 unit-tests:
     pip install -r requirements/test.txt
-    pytest -v tests/
+    pytest --cov=./json2dynamo --cov-fail-under 90 --cov-report term-missing --cov-report xml -vs tests/
