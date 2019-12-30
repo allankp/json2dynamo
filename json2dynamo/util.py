@@ -5,11 +5,14 @@ from dynamodb_json import json_util as json
 class JsonTransfromer:
     def transform_json_files(self, input_path: str, output_path: str):
         for json_file in self.get_json_files(input_path):
-            with open(f"{input_path}/{json_file}", "r") as file:
-                template_json = json.loads(file.read())
-                self.write_file_to_folder(
-                    json.dumps(template_json), output_path, json_file
-                )
+            try:
+                with open(f"{input_path}/{json_file}", "r") as file:
+                    template_json = json.loads(file.read())
+                    self.write_file_to_folder(
+                        json.dumps(template_json), output_path, json_file
+                    )
+            except IOError as err:
+                raise err
 
     @staticmethod
     def write_file_to_folder(data: dict, outpath: str, filename: str) -> list:

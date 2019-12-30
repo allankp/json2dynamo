@@ -1,1 +1,0 @@
-{"test_key_one_a": {"S": "test_value_one"}, "test_key_two_a": {"BOOL": false}, "test_key_three_a": {"M": {"test_key_nested_one_a": {"S": "test_key_nested_one"}, "test_key_nested_two_a": {"BOOL": true}}}, "test_key_four_a": {"N": "1"}}
